@@ -1,3 +1,8 @@
 body {
   background-color: #ebf2ff;
 }
+
+.place__holder__image{
+  height: 200px;
+  width: 100%;
+}

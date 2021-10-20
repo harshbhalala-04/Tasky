@@ -14,7 +14,27 @@ const generateNewCard = (taskData) =>
         <img src=${taskData.imageUrl} class="card-img-top" alt="Image">
         <h5 class="card-title fw-bold text-primary mt-3">${taskData.taskTitle}</h5>
         <p class="card-text">${taskData.taskDescription}</p>
-        <a href="#" class="btn btn-primary">Open Task</a>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+          View Task
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              
+              <div class="modal-body">
+                <img src=${taskData.imageUrl} class="img-fluid place__holder__image" alt="Image">
+                <h2 class="my-3">${taskData.taskTitle}</h5>
+                <p class="lead">${taskData.taskDescription}</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>`
